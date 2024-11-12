@@ -454,7 +454,28 @@ document.addEventListener("DOMContentLoaded", function() {
                   sliderLeftTop.appendChild(imageElement);
               }
           });
-          
+
+          let cartbtn = document.querySelector('.cart-button');
+          cartbtn.addEventListener('click', function () {
+            let img = productData.imageGallery[0];
+            let name = `${productData.model}`;
+            let price = `${productData.priceSale.toLocaleString()}đ`;
+
+            let user = { img, name, price, quantity: 1 };
+            let userData = JSON.parse(localStorage.getItem('userData')) || [];
+
+            let existingUser = userData.find(item => item.name === user.name);
+            if (existingUser) {
+                existingUser.quantity += 1;
+            } else {
+                userData.push(user);
+            }
+
+            localStorage.setItem('userData', JSON.stringify(userData));
+            alert('Sản phẩm đã được thêm vào giỏ hàng ❤️💕😘');
+          });
+      })
+      .catch(error => console.error('Error fetching JSON:', error));
       })
       .catch(error => console.error('Error fetching JSON:', error));
 });
