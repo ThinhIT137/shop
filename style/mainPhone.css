@@ -596,6 +596,7 @@ body {
 .san_pham {
     display: inline-block;
     width: 200px;
+    vertical-align: top;
     /* width: 17.5%; */
     margin: 0.5em auto;
 }
