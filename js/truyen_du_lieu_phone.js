@@ -149,8 +149,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 }
 
                 const viewResultsButtonRam = document.querySelector("#contain-3 .xem_ket_qua3");
-                viewResultsButtonRam.addEventListener("click", applyStorageFilter); // Đã sửa lại thành viewResultsButtonRam
-                function applyStorageFilter() {
+                viewResultsButtonRam.addEventListener("click", applyRamFilter); // Đã sửa lại thành viewResultsButtonRam
+                function applyRamFilter() {
                     const storageFilters = [
                         { id: "GB4", value: "4GB" },
                         { id: "GB6", value: "6GB" },
