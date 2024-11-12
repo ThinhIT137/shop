@@ -21,24 +21,26 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Tạo hàng sản phẩm trong giỏ hàng
+    // Tạo hàng sản phẩm trong giỏ hàng
     function createCartRow(item) {
         const row = document.createElement('tr');
 
-        // Chuyển đổi giá trị price từ chuỗi sang số
-        const price = parseFloat(item.price.replace(/\./g, '').replace('đ', '').trim()) || 0; // Loại bỏ dấu "." và "đ"
+        // Lấy giá từ chuỗi `price` trong localStorage và chuyển đổi sang số
+        const price = parseInt(item.price.replace(/\D/g, '')) || 0; // Chỉ lấy số và bỏ tất cả ký tự khác
         const quantity = parseInt(item.quantity) || 1;
         const totalPrice = price * quantity; // Tính tổng giá cho sản phẩm
 
         row.innerHTML = `
             <td><img src="${item.img}" alt="${item.name}" style="width:50px;height:50px;"></td>
             <td>${item.name}</td>
-            <td class="unit-price">${item.price}</td> <!-- Hiển thị giá gốc -->
+            <td class="unit-price" data-price="${price}">${price.toLocaleString('vi-VN')}đ</td> <!-- Hiển thị giá gốc -->
             <td><input type="number" class="quantity" value="${quantity}" min="0" max="100"></td>
             <td class="total-price">${totalPrice.toLocaleString('vi-VN')}đ</td> <!-- Hiển thị tổng giá cho hàng -->
             <td><button class="del-icon">Xóa</button></td>
         `;
         return row;
     }
+
 
     // Hiển thị thông báo giỏ hàng trống nếu chưa có
     function displayEmptyMessage() {
@@ -169,4 +171,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Gọi hàm khởi tạo giỏ hàng
     loadCart();
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    if (localStorage.getItem('purchaseSuccess') === 'true') {
+        alert('Cảm ơn bạn đã mua hàng!'); // Thông báo mua hàng thành công
+        localStorage.removeItem('purchaseSuccess'); // Xóa để không hiển thị lại lần nữa
+    }
+    localStorage.removeItem('userData'); // Xóa dữ liệu giỏ hàng
 });
