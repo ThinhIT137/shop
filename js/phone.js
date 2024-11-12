@@ -53,10 +53,8 @@
             button.addEventListener('click', function() {
                 // Tìm phần tử cha gần nhất có class .filter_contain và ẩn nó
                 this.closest('.filter_contain').style.display = 'none';
-                document.querySelectorAll('.container input[type="radio"]:checked + label').forEach(label => {
-                    label.style.backgroundColor = '#f3f4f6';
-                    label.style.border = '1px solid #e5e7eb';
-                    label.style.color = '#444';        
+                document.querySelectorAll('.container input[type="radio"]:checked').forEach(radio => {
+                    radio.checked = false;
                 });
             });
         });
