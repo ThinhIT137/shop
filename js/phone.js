@@ -49,6 +49,18 @@
             });
         });
 
+        document.querySelectorAll('.close-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                // Tìm phần tử cha gần nhất có class .filter_contain và ẩn nó
+                this.closest('.filter_contain').style.display = 'none';
+                document.querySelectorAll('.container input[type="radio"]:checked + label').forEach(label => {
+                    label.style.backgroundColor = '#f3f4f6';
+                    label.style.border = '1px solid #e5e7eb';
+                    label.style.color = '#444';        
+                });
+            });
+        });
+
         var slideQC = new Swiper(".slideQC", {
             spaceBetween: 30,
             centeredSlides: true,
@@ -76,13 +88,3 @@
                 prevEl: ".button-prev",
             },
         });
-
-        // Chọn tất cả các nút "Đóng" có class là .close-btn
-        document.querySelectorAll('.close-btn').forEach(button => {
-            button.addEventListener('click', function() {
-                // Tìm phần tử cha gần nhất có class .filter_contain và ẩn nó
-                this.closest('.filter_contain').style.display = 'none';
-            });
-        });
-
-        
