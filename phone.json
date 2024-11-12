@@ -12718,49 +12718,6 @@
     },
     {
       "id": "S5",
-      "image": "images/images-smartphone/oneplus-8t-thumb.jpg",
-      "imageGallery": [
-          "images/images-smartphone/oneplus-8t-front.jpg",
-          "images/images-smartphone/oneplus-8t-back.jpg",
-          "images/images-smartphone/oneplus-8t-side.jpg"
-      ],
-      "video":"https://www.youtube.com/watch?v=cWSgaBsuSLU",
-      "brand": "OnePlus",
-      "model": "8T",
-      "color": "Bạc",
-      "ram": "12GB",
-      "storage": "256GB",
-      "price": 16000000,
-      "sale": 10,
-      "priceSale": 14400000,
-      "batteryCapacity": "4500 mAh",
-      "wired": "65W",
-      "wireless": "N/A",
-      "operatingSystem": "OxygenOS 11 (Android 11)",
-      "cameraSpecs": "48 MP + 16 MP + 5 MP + 2 MP",
-      "network": "5G",
-      "wifi": "Wi-Fi 6",
-      "bluetooth": "Bluetooth 5.1",
-      "processor": "Snapdragon 865",
-      "condition": "Mới",
-      "waterResistance": "Không có",
-      "screenType": "AMOLED",
-      "bioSecurity": "Cảm biến vân tay (trong màn hình), Nhận diện khuôn mặt",
-      "dimensions": "160.7 x 74.1 x 8.4 mm",
-      "weight": "188 grams",
-      "releaseDate": "2020-10-14",
-      "stockStatus": "Còn hàng",
-      "simType": ["2 SIM (Nano-SIM, chế độ chờ kép)"],
-      "chargingPort": "USB-C",
-      "sdCardSupport": false,
-      "refreshRate": "120Hz",
-      "audioFeatures": "Loa âm thanh nổi",
-      "buildMaterial": "Kính và khung kim loại",
-      "dualSim": true,
-      "nfc": true
-    },
-    {
-      "id": "S6",
       "image": "images/images-smartphone/oneplus-8-thumb.jpg",
       "imageGallery": [
           "images/images-smartphone/oneplus-8-front.jpg",
@@ -12803,5 +12760,4 @@
       "nfc": true
     }
   ]
-    
 }
