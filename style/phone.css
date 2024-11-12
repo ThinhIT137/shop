@@ -16,7 +16,11 @@
 }
 .san_pham:hover {
     box-shadow: 0 0 10px 0 #0000005e;
+    transform: translateY(-5px);
     /* border-radius: 10px; */
+}
+.san_pham:hover img {
+    transform: scale(1.1);
 }
 .san_pham .Tra_gop {
     display: flex;
